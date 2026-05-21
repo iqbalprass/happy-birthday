@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title🎉 Ucapan Ulang Tahun Spesial 🎂</title>
+    <title>🎉 Ucapan Ulang Tahun Spesial 🎂</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
     <script>
@@ -11,11 +11,13 @@
             theme: {
                 extend: {
                     colors: {
-                        utama: '#FF6B9E',
-                        kedua: '#FFD166',
-                        ketiga: '#06D6A0',
-                        keempat: '#118AB2',
-                        kelima: '#073B4C',
+                        merahMuda: '#FF5C8A',
+                        kuningCerah: '#FFD12F',
+                        hijauSegar: '#2DD48F',
+                        biruLangit: '#38BDF8',
+                        unguImut: '#C084FC',
+                        gelap: '#1E293B',
+                        spotify: '#1DB954',
                     },
                     fontFamily: {
                         lucu: ['"Comic Neue"', 'cursive', 'sans-serif'],
@@ -26,39 +28,50 @@
     </script>
     <style type="text/tailwindcss">
         @layer utilities {
-            .text-shadow {
-                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+            .text-berbayang {
+                text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.15);
             }
-            .bounce-anim {
-                animation: bounce 2s infinite;
+            .melompat {
+                animation: melompat 2s infinite;
             }
-            .putar {
-                animation: putar 10s linear infinite;
+            .berputar {
+                animation: berputar 8s linear infinite;
             }
-            .muncul {
-                animation: muncul 1s ease-out;
+            .munculPelan {
+                animation: munculPelan 0.8s ease-out forwards;
+                opacity: 0;
             }
-            @keyframes bounce {
+            .ayun {
+                animation: ayun 3s ease-in-out infinite;
+            }
+            @keyframes melompat {
                 0%, 20%, 50%, 80%, 100% {transform: translateY(0);}
-                40% {transform: translateY(-20px);}
-                60% {transform: translateY(-10px);}
+                40% {transform: translateY(-18px);}
+                60% {transform: translateY(-8px);}
             }
-            @keyframes putar {
+            @keyframes berputar {
                 from {transform: rotate(0deg);}
                 to {transform: rotate(360deg);}
             }
-            @keyframes muncul {
-                from {opacity: 0; transform: scale(0.8);}
-                to {opacity: 1; transform: scale(1);}
+            @keyframes munculPelan {
+                from {opacity: 0; transform: scale(0.9) translateY(10px);}
+                to {opacity: 1; transform: scale(1) translateY(0);}
             }
-            .kertas-kado {
+            @keyframes ayun {
+                0%, 100% {transform: rotate(-3deg);}
+                50% {transform: rotate(3deg);}
+            }
+            .pola-kado {
                 background-image: 
                     linear-gradient(45deg, #ffffff 25%, transparent 25%),
                     linear-gradient(-45deg, #ffffff 25%, transparent 25%),
                     linear-gradient(45deg, transparent 75%, #ffffff 75%),
                     linear-gradient(-45deg, transparent 75%, #ffffff 75%);
-                background-size: 20px 20px;
-                background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
+                background-size: 16px 16px;
+                background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+            }
+            .bingkai-spotify {
+                box-shadow: 0 0 0 3px #1DB954, 0 10px 25px rgba(0,0,0,0.15);
             }
         }
     </style>
@@ -66,163 +79,148 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Comic+Neue:wght@400;700&display=swap" rel="stylesheet">
 </head>
-<body class="font-lucu overflow-x-hidden">
-    <!-- Tampilan 1: Halaman Awal -->
-    <section id="halaman1" class="min-h-screen bg-gradient-to-br from-utama/20 to-kedua/30 flex flex-col items-center justify-center p-6 text-center relative">
-        <div class="absolute top-10 left-10 text-4xl putar">🎈</div>
-        <div class="absolute top-20 right-10 text-5xl putar" style="animation-duration: 12s;">🎁</div>
-        <div class="absolute bottom-10 left-10 text-5xl putar" style="animation-duration: 8s;">🍰</div>
-        <div class="absolute bottom-20 right-10 text-4xl putar" style="animation-duration: 15s;">🎉</div>
+<body class="font-lucu overflow-x-hidden bg-kuningCerah/10">
 
-        <h1 class="text-[clamp(2.5rem,6vw,4rem)] font-bold text-utama text-shadow mb-4 bounce-anim">
+    <!-- ===================================
+        TAMPILAN 1 : HALAMAN Awal
+    =================================== -->
+    <section id="halaman1" class="min-h-screen bg-gradient-to-br from-merahMuda/20 ke kuningCerah/30 flex flex-col items-center justify-center p-6 text-center relative">
+        <!-- Hiasan Mengambang -->
+        <div class="absolute top-12 left-12 text-4xl berputar">🎈</div>
+        <div class="absolute top-20 right-10 text-5xl berputar" style="animation-duration: 12s;">🎁</div>
+        <div class="absolute bottom-16 left-10 text-5xl berputar" style="animation-duration: 9s;">🍰</div>
+        <div class="absolute bottom-20 right-12 text-4xl berputar" style="animation-duration: 15s;">🎉</div>
+        <div class="absolute top-1/3 left-1/4 text-3xl ayun">✨</div>
+        <div class="absolute bottom-1/3 right-1/4 text-3xl ayun" style="animation-delay: 1s;">✨</div>
+
+        <h1 class="text-[clamp(2.8rem,7vw,4.5rem)] font-bold text-merahMuda text-berbayang mb-5 melompat">
             🎉 Selamat Ulang Tahun! 🎂
         </h1>
-        <p class="text-[clamp(1.1rem,3vw,1.5rem)] text-kelima mb-8 max-w-2xl">
-            Wah, hari spesialmu sudah tiba! 🥳 Siap-siap dapat kejutan dan doa terbaik dari orang yang paling peduli sama kamu. Klik tombol di bawah ini untuk mulai ya!
+        <p class="text-[clamp(1.1rem,3vw,1.4rem)] text-gelap/70 mb-10 max-w-xl">
+            Wih, hari spesial kamu sudah tiba nih! 🥳 Siap-siap dapat kejutan seru dan ucapan tulus dari aku. Tekan tombol di bawah ini ya!
         </p>
-        <button onclick="gantiHalaman('halaman2')" class="bg-ketiga hover:bg-ketiga/80 text-white font-bold py-4 px-10 rounded-full text-xl shadow-lg transform hover:scale-110 transition-all duration-300 border-4 border-white">
+        <button onclick="gantiHalaman('halaman2')" class="bg-hijauSegar hover:bg-hijauSegar/80 text-white font-bold py-4 px-12 rounded-full text-xl shadow-xl transform hover:scale-110 transition-all duration-300 border-4 border-white">
             Masuk Yuk! 🚪✨
         </button>
     </section>
 
-    <!-- Tampilan 2: Halaman Pertanyaan -->
-    <section id="halaman2" class="min-h-screen bg-gradient-to-tr from-kedua/30 to-ketiga/20 hidden flex-col items-center justify-center p-6">
-        <h2 class="text-[clamp(2rem,5vw,3rem)] font-bold text-keempat text-shadow mb-8 text-center">
-            🤫 Sedikit Cerita Dulu...
+
+    <!-- ===================================
+        TAMPILAN 2 : PERTANYAAN PILIHAN
+    =================================== -->
+    <section id="halaman2" class="min-h-screen bg-gradient-to-tr from-kuningCerah/30 ke hijauSegar/20 hidden flex-col items-center justify-center p-6">
+        <h2 class="text-[clamp(2rem,5vw,3rem)] font-bold text-biruLangit text-berbayang mb-8 text-center">
+            🤩 Yuk, Jawab Dulu!
         </h2>
-        <div class="bg-white/70 backdrop-blur-md p-8 rounded-3xl shadow-2xl w-full max-w-lg kertas-kado">
-            <div class="mb-6">
-                <label class="block text-kelima font-bold text-lg mb-2">Siapa nama kamu? 👤</label>
-                <input type="text" id="namaPengirim" class="w-full p-3 rounded-xl border-2 border-keempat/30 focus:border-keempat outline-none text-lg" placeholder="Tulis nama kamu di sini...">
+        <div class="bg-white/70 backdrop-blur-md p-8 rounded-3xl shadow-2xl w-full max-w-lg pola-kado border-4 border-dashed border-unguImut/40">
+            
+            <!-- Pertanyaan 1 -->
+            <div class="mb-7 p-4 bg-white/60 rounded-2xl shadow-md">
+                <p class="text-gelap font-bold text-lg mb-3">1. Makanan favorit kamu apa nih? 🍕</p>
+                <div class="space-y-2 text-lg">
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-merahMuda transition">
+                        <input type="radio" name="makanan" value="Nasi Padang 🥘" class="w-5 h-5 accent-merahMuda">
+                        <span>Nasi Padang</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-merahMuda transition">
+                        <input type="radio" name="makanan" value="Pizza 🍕" class="w-5 h-5 accent-merahMuda">
+                        <span>Pizza</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-merahMuda transition">
+                        <input type="radio" name="makanan" value="Seblak 🌶️" class="w-5 h-5 accent-merahMuda" checked>
+                        <span>Seblak</span>
+                    </label>
+                </div>
             </div>
-            <div class="mb-6">
-                <label class="block text-kelima font-bold text-lg mb-2">Apa hubungan kamu sama dia? 🤝</label>
-                <select id="hubungan" class="w-full p-3 rounded-xl border-2 border-keempat/30 focus:border-keempat outline-none text-lg">
-                    <option value="Teman">Teman Seru 🤪</option>
-                    <option value="Sahabat">Sahabat Sejati 🤞</option>
-                    <option value="Keluarga">Keluarga Tercinta 🏠</option>
-                    <option value="Pacar">Orang Spesial ❤️</option>
-                    <option value="Lainnya">Yang Penting Kenal 😜</option>
-                </select>
+
+            <!-- Pertanyaan 2 -->
+            <div class="mb-7 p-4 bg-white/60 rounded-2xl shadow-md">
+                <p class="text-gelap font-bold text-lg mb-3">2. Kalau liburan paling suka ke mana? ✈️</p>
+                <div class="space-y-2 text-lg">
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-biruLangit transition">
+                        <input type="radio" name="liburan" value="Pantai 🌊" class="w-5 h-5 accent-biruLangit">
+                        <span>Pantai</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-biruLangit transition">
+                        <input type="radio" name="liburan" value="Gunung ⛰️" class="w-5 h-5 accent-biruLangit" checked>
+                        <span>Gunung</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-biruLangit transition">
+                        <input type="radio" name="liburan" value="Mall 🛍️" class="w-5 h-5 accent-biruLangit">
+                        <span>Jalan-jalan ke Mall</span>
+                    </label>
+                </div>
             </div>
-            <div class="mb-8">
-                <label class="block text-kelima font-bold text-lg mb-2">Pesan singkat buat dia! 📝</label>
-                <textarea id="pesanSingkat" class="w-full p-3 rounded-xl border-2 border-keempat/30 focus:border-keempat outline-none text-lg h-28" placeholder="Misal: Semoga makin keren, makin pintar, dan makin bahagia!"></textarea>
+
+            <!-- Pertanyaan 3 -->
+            <div class="mb-9 p-4 bg-white/60 rounded-2xl shadow-md">
+                <p class="text-gelap font-bold text-lg mb-3">3. Kata apa yang cocok buat kamu? ✨</p>
+                <div class="space-y-2 text-lg">
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-hijauSegar transition">
+                        <input type="radio" name="sifat" value="Asik & Seru 🤪" class="w-5 h-5 accent-hijauSegar" checked>
+                        <span>Asik & Seru</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-hijauSegar transition">
+                        <input type="radio" name="sifat" value="Baik Hati & Lembut 💖" class="w-5 h-5 accent-hijauSegar">
+                        <span>Baik Hati & Lembut</span>
+                    </label>
+                    <label class="flex items-center gap-2 cursor-pointer hover:text-hijauSegar transition">
+                        <input type="radio" name="sifat" value="Pintar & Cerdas 🧠" class="w-5 h-5 accent-hijauSegar">
+                        <span>Pintar & Cerdas</span>
+                    </label>
+                </div>
             </div>
-            <button onclick="gantiHalaman('halaman3')" class="w-full bg-utama hover:bg-utama/80 text-white font-bold py-3 rounded-xl text-lg shadow-md transform hover:scale-105 transition-all">
-                Kirim & Lihat Kejutan! 🎁🎊
+
+            <button onclick="gantiHalaman('halaman3')" class="w-full bg-unguImut hover:bg-unguImut/80 text-white font-bold py-4 rounded-xl text-lg shadow-lg transform hover:scale-105 transition-all">
+                Lihat Ucapan & Kejutan! 🎊🎁
             </button>
         </div>
     </section>
 
-    <!-- Tampilan 3: Halaman Utama Ucapan, Foto, Musik & Hiasan -->
-    <section id="halaman3" class="min-h-screen bg-gradient-to-br from-ketiga/20 to-keempat/20 hidden p-6 relative overflow-hidden">
-        <!-- Hiasan Mengambang -->
+
+    <!-- ===================================
+        TAMPILAN 3 : FOTO, KUE & LAGU
+    =================================== -->
+    <section id="halaman3" class="min-h-screen bg-gradient-to-br from-hijauSegar/20 ke biruLangit/20 hidden p-6 relative overflow-hidden">
+        <!-- Hiasan Latar -->
         <div class="absolute top-0 left-0 w-full h-full pointer-events-none">
-            <div class="absolute text-6xl top-10 left-10 putar">🎈</div>
-            <div class="absolute text-5xl top-20 right-20 putar" style="animation-duration: 14s;">🎂</div>
-            <div class="absolute text-7xl bottom-20 left-1/4 putar" style="animation-duration: 9s;">🍭</div>
-            <div class="absolute text-6xl bottom-10 right-1/3 putar" style="animation-duration: 11s;">🍬</div>
-            <div class="absolute text-5xl top-1/2 left-5 putar" style="animation-duration: 13s;">🎉</div>
+            <div class="absolute text-7xl top-10 left-10 berputar">🎈</div>
+            <div class="absolute text-6xl top-20 right-20 berputar" style="animation-duration: 14s;">🎂</div>
+            <div class="absolute text-8xl bottom-20 left-1/4 berputar" style="animation-duration: 9s;">🍭</div>
+            <div class="absolute text-6xl bottom-10 right-1/3 berputar" style="animation-duration: 11s;">🍬</div>
+            <div class="absolute text-5xl top-1/2 left-5 ayun">🎉</div>
+            <div class="absolute text-5xl bottom-1/4 right-10 ayun" style="animation-delay: 2s;">✨</div>
         </div>
 
-        <div class="max-w-4xl mx-auto muncul relative z-10">
-            <div class="bg-white/80 backdrop-blur-lg rounded-[3rem] shadow-2xl p-8 md:p-12 border-8 border-dashed border-utama/40 text-center">
+        <div class="max-w-4xl mx-auto relative z-10">
+            <div class="bg-white/80 backdrop-blur-lg rounded-[3rem] shadow-2xl p-8 md:p-12 border-8 border-dashed border-merahMuda/40 text-center munculPelan">
                 
                 <!-- Judul Utama -->
-                <h2 class="text-[clamp(2.2rem,5vw,3.5rem)] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-utama to-ketiga mb-4 bounce-anim">
+                <h2 class="text-[clamp(2.2rem,5vw,3.8rem)] font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-merahMuda to-hijauSegar mb-6 melompat">
                     SELAMAT ULANG TAHUN! 🥳
                 </h2>
 
-                <!-- Pesan Dinamis dari Halaman 2 -->
-                <div id="pesanTampil" class="text-kelima text-xl md:text-2xl mb-8 space-y-2">
+                <!-- Pesan Hasil Jawaban -->
+                <div id="pesanHasil" class="text-gelap text-xl md:text-2xl mb-10 space-y-3 bg-kuningCerah/30 p-5 rounded-2xl border-2 border-kuningCerah/50">
                     <!-- Diisi oleh JavaScript -->
                 </div>
 
-                <!-- Kue Ulang Tahun Keren -->
-                <div class="my-12 flex justify-center">
-                    <div class="relative transform hover:scale-105 transition-transform duration-500">
-                        <div class="text-9xl md:text-[12rem]">🎂</div>
-                        <div class="absolute -top-5 left-1/2 -translate-x-1/2 text-4xl putar" style="animation-duration: 6s;">🕯️</div>
-                        <div class="absolute -top-3 left-1/3 text-3xl putar" style="animation-duration: 8s;">🔥</div>
-                        <div class="absolute -top-3 right-1/3 text-3xl putar" style="animation-duration: 7s;">🔥</div>
+                <!-- Kue Ulang Tahun -->
+                <div class="my-10 flex justify-center">
+                    <div class="relative transform hover:scale-105 transition-transform duration-500 ayun">
+                        <div class="text-[clamp(8rem,15vw,13rem)]">🎂</div>
+                        <div class="absolute -top-6 left-1/2 -translate-x-1/2 text-5xl berputar" style="animation-duration: 5s;">🕯️</div>
+                        <div class="absolute -top-3 left-1/3 text-4xl berputar" style="animation-duration: 7s;">🔥</div>
+                        <div class="absolute -top-3 right-1/3 text-4xl berputar" style="animation-duration: 6s;">🔥</div>
                     </div>
                 </div>
 
                 <!-- Galeri Foto -->
-                <h3 class="text-3xl font-bold text-keempat mb-6">📸 Kenangan Seru Kita 📸</h3>
-                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-10">
-                    <img src="https://picsum.photos/id/177/400/300" alt="Foto Kenangan 1" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kedua hover:border-utama transform hover:-rotate-2 hover:scale-105 transition-all duration-300">
-                    <img src="https://picsum.photos/id/220/400/300" alt="Foto Kenangan 2" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kedua hover:border-utama transform hover:rotate-2 hover:scale-105 transition-all duration-300">
-                    <img src="https://picsum.photos/id/169/400/300" alt="Foto Kenangan 3" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kedua hover:border-utama transform hover:-rotate-1 hover:scale-105 transition-all duration-300">
-                    <img src="https://picsum.photos/id/192/400/300" alt="Foto Kenangan 4" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kedua hover:border-utama transform hover:rotate-1 hover:scale-105 transition-all duration-300">
-                    <img src="https://picsum.photos/id/179/400/300" alt="Foto Kenangan 5" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kedua hover:border-utama transform hover:-rotate-2 hover:scale-105 transition-all duration-300">
-                    <img src="https://picsum.photos/id/145/400/300" alt="Foto Kenangan 6" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kedua hover:border-utama transform hover:rotate-2 hover:scale-105 transition-all duration-300">
-                </div>
-
-                <!-- Pemutar Musik -->
-                <div class="bg-ketiga/20 p-5 rounded-2xl inline-block shadow-lg">
-                    <h4 class="text-xl font-bold text-kelima mb-2">🎵 Lagu Spesial Buat Kamu 🎶</h4>
-                    <audio controls autoplay loop class="w-full max-w-xs">
-                        <source src="https://www.soundhelix.com/examples/mp3/SoundHelix-Song-1.mp3" type="audio/mpeg">
-                        Browser kamu tidak mendukung pemutar audio.
-                    
-                </div>
-
-                <!-- Penutup -->
-                <p class="mt-10 text-lg text-keempat font-semibold">
-                    Semoga hari ini dan seterusnya penuh warna dan kebahagiaan! 🎈🌈✨
-                </p>
-            </div>
-        </div>
-    </section>
-
-    <!-- JavaScript -->
-    <script>
-        function gantiHalaman(idHalaman) {
-            // Sembunyikan semua halaman
-            document.querySelectorAll('section').forEach(sec => sec.classList.add('hidden'));
-            // Tampilkan halaman yang dipilih
-            document.getElementById(idHalaman).classList.remove('hidden');
-
-            // Jika masuk ke halaman 3, proses data input
-            if (idHalaman === 'halaman3') {
-                const nama = document.getElementById('namaPengirim').value || 'Temanmu';
-                const hubungan = document.getElementById('hubungan').value;
-                const pesan = document.getElementById('pesanSingkat').value || 'Semoga panjang umur, sehat selalu, dan makin sukses ya! Jangan lupa bahagia terus! 😆🎂';
-                
-                const areaPesan = document.getElementById('pesanTampil');
-                areaPesan.innerHTML = `
-                    <p>Halo, Selamat Ulang Tahun ya! 🎉🎁</p>
-                    <p>Dari aku <span class="font-bold text-utama">${nama}</span>, <span class="italic">${hubungan}</span> kamu.</p>
-                    <p class="mt-4 bg-kedua/40 p-4 rounded-xl border-2 border-dashed border-kedua">💌 "${pesan}" 💌</p>
-                `;
-
-                // Efek konfeti sederhana
-                buatKonfeti();
-            }
-        }
-
-        // Fungsi efek konfeti
-        function buatKonfeti() {
-            const jumlah = 50;
-            const wadah = document.getElementById('halaman3');
-            const warna = ['#FF6B9E', '#FFD166', '#06D6A0', '#118AB2', '#EF476F'];
-
-            for (let i = 0; i < jumlah; i++) {
-                const konfeti = document.createElement('div');
-                konfeti.classList.add('absolute', 'w-3', 'h-5', 'rounded-sm', 'animate-bounce');
-                konfeti.style.left = `${Math.random() * 100}%`;
-                konfeti.style.top = `${Math.random() * 100}%`;
-                konfeti.style.backgroundColor = warna[Math.floor(Math.random() * warna.length)];
-                konfeti.style.animationDelay = `${Math.random() * 2}s`;
-                konfeti.style.animationDuration = `${1 + Math.random() * 2}s`;
-                wadah.appendChild(konfeti);
-
-                // Hapus elemen setelah animasi selesai
-                setTimeout(() => konfeti.remove(), 3000);
-            }
-        }
-    </script>
-</body>
-</html>
+                <h3 class="text-3xl font-bold text-biruLangit mb-6">📸 Galeri Kenangan Seru 📸</h3>
+                <div class="grid grid-cols-2 md:grid-cols-3 gap-4 mb-12">
+                    <img src="https://picsum.photos/id/177/400/300" alt="Kenangan 1" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kuningCerah hover:border-merahMuda transform hover:-rotate-3 hover:scale-105 transition-all duration-300">
+                    <img src="https://picsum.photos/id/220/400/300" alt="Kenangan 2" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kuningCerah hover:border-merahMuda transform hover:rotate-3 hover:scale-105 transition-all duration-300">
+                    <img src="https://picsum.photos/id/169/400/300" alt="Kenangan 3" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kuningCerah hover:border-merahMuda transform hover:-rotate-2 hover:scale-105 transition-all duration-300">
+                    <img src="https://picsum.photos/id/192/400/300" alt="Kenangan 4" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kuningCerah hover:border-merahMuda transform hover:rotate-2 hover:scale-105 transition-all duration-300">
+                    <img src="https://picsum.photos/id/179/400/300" alt="Kenangan 5" class="rounded-2xl h-40 w-full object-cover shadow-lg border-4 border-kuningCerah hover:border-merahMuda transform hover:-rotate-3 hover:scale-105 transition-all duration-300">
+                    <img src="https://picsum.photos/id/145
